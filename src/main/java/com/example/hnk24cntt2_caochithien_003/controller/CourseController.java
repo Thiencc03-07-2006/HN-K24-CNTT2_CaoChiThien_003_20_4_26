@@ -39,7 +39,7 @@ public class CourseController {
 
     @GetMapping("/edit/{id}")
     public String editCourse(@PathVariable("id") Long id, Model model) {
-        model.addAttribute(courseSevice.getCourse(id));
+        model.addAttribute("course",courseSevice.getCourse(id));
         return "form";
     }
 
